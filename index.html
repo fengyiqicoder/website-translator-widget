@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trailhead Coffee</title>
+<style>
+  :root { --ink: #231a14; --muted: #6f6258; --cream: #f6efe6; --brown: #6b3f22; --card: #fffaf4; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: var(--ink); background: var(--cream); line-height: 1.6; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; font-family: -apple-system, Helvetica, Arial, sans-serif; }
+  .logo { font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: 15px; }
+  nav a { margin-left: 26px; color: var(--muted); text-decoration: none; font-size: 15px; }
+  .hero { text-align: center; padding: 70px 0 80px; }
+  .hero small { font-family: -apple-system, Helvetica, Arial, sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--brown); font-size: 13px; }
+  h1 { font-size: 72px; line-height: 1.02; margin: 14px 0 18px; font-weight: 400; }
+  .hero p { max-width: 34em; margin: 0 auto 32px; color: var(--muted); font-size: 19px; }
+  .btn { display: inline-block; padding: 14px 30px; background: var(--brown); color: #fff; text-decoration: none; border-radius: 999px; font-family: -apple-system, Helvetica, Arial, sans-serif; font-weight: 600; }
+  .cup { font-size: 88px; margin-top: 46px; }
+  section { padding: 56px 0; }
+  h2 { font-size: 38px; font-weight: 400; margin: 0 0 26px; text-align: center; }
+  .menu { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 48px; max-width: 760px; margin: 0 auto; }
+  .item { display: flex; justify-content: space-between; border-bottom: 1px dashed #d6c8b8; padding: 10px 0; font-size: 18px; }
+  .item span:last-child { color: var(--brown); font-family: -apple-system, Helvetica, Arial, sans-serif; font-weight: 600; }
+  .info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card { background: var(--card); border: 1px solid #eadccb; border-radius: 18px; padding: 24px; text-align: center; }
+  .card h3 { margin: 0 0 6px; font-size: 21px; font-weight: 400; }
+  .card p { margin: 0; color: var(--muted); font-family: -apple-system, Helvetica, Arial, sans-serif; font-size: 15px; }
+  footer { text-align: center; padding: 40px 0 60px; color: var(--muted); font-family: -apple-system, Helvetica, Arial, sans-serif; font-size: 14px; }
+  @media (max-width: 720px) { h1 { font-size: 46px; } .menu, .info { grid-template-columns: 1fr; } nav a { display: none; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav><div class="logo">Trailhead Coffee</div><div><a href="#menu">Menu</a><a href="#visit">Visit</a></div></nav>
+    <header class="hero">
+      <small>Small-batch roasters · since 2019</small>
+      <h1>Good coffee,<br>before the trail.</h1>
+      <p>A tiny roastery and café at the foot of Mount Tabor. Fresh pastries every morning, beans roasted on Thursdays, and a dog bowl by the door.</p>
+      <a class="btn" href="#menu">See the menu</a>
+      <div class="cup">☕</div>
+    </header>
+  </div>
+  <section id="menu"><div class="wrap">
+    <h2>Menu</h2>
+    <div class="menu">
+      <div class="item"><span>Espresso</span><span>$3.25</span></div>
+      <div class="item"><span>Oat milk latte</span><span>$5.50</span></div>
+      <div class="item"><span>Pour-over of the day</span><span>$4.75</span></div>
+      <div class="item"><span>Cold brew</span><span>$4.50</span></div>
+      <div class="item"><span>Cardamom bun</span><span>$4.00</span></div>
+      <div class="item"><span>Trail mix cookie</span><span>$3.00</span></div>
+    </div>
+  </div></section>
+  <section id="visit"><div class="wrap">
+    <h2>Come say hi</h2>
+    <div class="info">
+      <div class="card"><h3>Hours</h3><p>Mon–Fri 6:30–3<br>Sat–Sun 7–4</p></div>
+      <div class="card"><h3>Where</h3><p>612 SE 60th Ave<br>Portland, Oregon</p></div>
+      <div class="card"><h3>Beans to go</h3><p>Roasted Thursdays<br>12 oz bags, $17</p></div>
+    </div>
+  </div></section>
+  <footer>© 2026 Trailhead Coffee</footer>
+<!-- Website translator. Paste before </body> on any page. -->
+<select id="translator" aria-label="Translate this page" translate="no"
+        style="position:fixed; right:16px; bottom:16px; z-index:9999; padding:8px 10px; font:14px system-ui,sans-serif; background:#fff; color:#0b1020; border:1px solid #0b1020">
+  <option value="">English (original)</option>
+  <option value="Spanish">Español</option>
+  <option value="French">Français</option>
+  <option value="German">Deutsch</option>
+  <option value="Portuguese">Português</option>
+  <option value="Japanese">日本語</option>
+  <option value="Simplified Chinese">简体中文</option>
+</select>
+
+<script src="https://onetagai.com/v1.js" data-key="ot_demo000000000000000000000"></script>
+<script>
+(() => {
+  const ROOT = document.body;   // what to translate; document.querySelector("main") for the content only
+  const SKIP = "script, style, noscript, code, pre, textarea, [translate=no], .notranslate";
+  const select = document.getElementById("translator");
+
+  // Collect the text nodes once and keep the original wording.
+  const nodes = [];
+  const walker = document.createTreeWalker(ROOT, NodeFilter.SHOW_TEXT);
+  for (let n; (n = walker.nextNode());) {
+    if (n.nodeValue.trim() && !n.parentElement.closest(SKIP)) nodes.push(n);
+  }
+  const original = nodes.map((n) => n.nodeValue);
+  // Put a translation back with the spaces the original had around it.
+  const fit = (from, to) => from.match(/^\s*/)[0] + to.trim() + from.match(/\s*$/)[0];
+
+  // One request per batch: a JSON array in, an array of the same length out.
+  async function translate(batch, lang) {
+    const { t } = await onetag.ask(
+      `Translate every string in this JSON array to ${lang}. Return JSON {"t": [the translations, same length, same order]}.`,
+      JSON.stringify(batch),
+      { json: true, maxTokens: 6000 }
+    );
+    if (Array.isArray(t) && t.length === batch.length) return t;
+    if (batch.length === 1) return batch;   // keep the original for this one
+    const half = batch.length >> 1;         // the lengths differ: try again in two halves
+    return [...await translate(batch.slice(0, half), lang), ...await translate(batch.slice(half), lang)];
+  }
+
+  let run = 0;
+  async function show(lang) {
+    const mine = ++run;
+    localStorage.setItem("translator:lang", lang);
+    nodes.forEach((n, i) => { n.nodeValue = original[i]; });
+    if (!lang) return;
+
+    // Translations are cached in the browser by original text, so a second visit costs nothing.
+    const store = "translator:" + lang;
+    const cache = JSON.parse(localStorage.getItem(store) || "{}");
+    const paint = () => nodes.forEach((n, i) => {
+      const t = cache[original[i].trim()];
+      if (typeof t === "string") n.nodeValue = fit(original[i], t);
+    });
+    paint();
+
+    // Batches of up to 40 strings or 4,000 characters, three requests at a time.
+    const todo = [...new Set(original.map((s) => s.trim()))].filter((s) => !(s in cache));
+    const batches = [];
+    for (let batch = [], size = 0, i = 0; i < todo.length; i++) {
+      batch.push(todo[i]); size += todo[i].length;
+      if (batch.length === 40 || size > 4000 || i === todo.length - 1) { batches.push(batch); batch = []; size = 0; }
+    }
+    try {
+      for (let i = 0; i < batches.length; i += 3) {
+        await Promise.all(batches.slice(i, i + 3).map(async (batch) => {
+          const t = await translate(batch, lang);
+          if (mine !== run) return;   // the visitor picked another language meanwhile
+          batch.forEach((s, k) => { if (typeof t[k] === "string") cache[s] = t[k]; });
+          localStorage.setItem(store, JSON.stringify(cache));
+          paint();
+        }));
+      }
+    } catch (error) {
+      console.warn("Translation stopped:", error.code, error.message);
+    }
+  }
+
+  select.addEventListener("change", () => show(select.value));
+  // Remember the visitor's language on the next page.
+  const saved = localStorage.getItem("translator:lang");
+  if (saved && [...select.options].some((o) => o.value === saved)) { select.value = saved; show(saved); }
+})();
+</script>
+</body>
+</html>
